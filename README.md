@@ -65,5 +65,40 @@ Leaning Basic Selenium using Java , WebDriver, TestNG
          driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
          ((JavascriptExecutor) driver).executeAsyncScript("document.getElementById('dummy')");
 
-            
+   ### Implicitly Wait
+         * Implicitly Wait is applicable only to findElement and findElements no other statement in selenium.
+         * By default Implicitly Wait is Zero.
+         
+         Syntax :
+                  WebDriver driver = new ChromeDriver();
+                  // set implicit wait tme as 30 Seconds
+                  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+                  
+                  
+  ### Explicit Wait
+         * The explicit wait is used to tell the Web Driver to wait for certain conditions or the maximum time limit before throwing an Exception.
+         * 
+         
+         Syntax : 
+                     WebDriverWait wait=new WebDriverWait( driver, timeoutInSeconds);
+                     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("xpath")));
+ ### Fluent Wait
+         
+         Syntax :
+                  FluentWait fw = new FluentWait(driver);
+                  // max time limit is 30 seconds
+                  fw.withTimeout(30, TimeUnit.SECONDS);
+                  fw.pollingEvery(5, TimeUnit.SECONDS);
+                  fw.ignoring(NoSuchElementException.class);
+                  
+                  
+                  
+ ### Take Screenshot in Selenium
+         * here is an interface called TakesScreenshot which provides the getScreenshotAs() method and which selenium uses to take a screenshot.
+         
+         
+         Syntax :
+                File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+                FileUtils.copyFile(scrFile, new File("D:pageScreenshot.png"), true); 
+   
         
