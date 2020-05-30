@@ -2,7 +2,7 @@
 Leaning Basic Selenium using Java , WebDriver, TestNG
 
 # Starting Selenium
-   ### interfaces in selenium:
+   ### Interfaces in selenium:
                 i)  SearchContext Interface
                 ii) WebDriver
             => SearchContext is the parent interface of WebDriver    
@@ -17,3 +17,10 @@ Leaning Basic Selenium using Java , WebDriver, TestNG
              vi) PartialLinkText
              vii) Css Selectors
              viii) Xpath
+     
+   ### About FindElement() and FindElements() Methods
+            i) FindElement() : property
+                  -> Use this method to access any single element on the web page.
+                  -> It returns the first matching element of the specified locator.
+                  -> It throws a NoSuchElementException exception when it fails to locate the element( when an element is not there).
+                  
