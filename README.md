@@ -57,11 +57,11 @@ Leaning Basic Selenium using Java , WebDriver, TestNG
                driver.manage().timeouts().pageLoadTimeout(-10, TimeUnit.SECONDS);
          * Page load timeout is not applicable when the user clicks a link to open a page.
 ### Set Script Load timeout
-   -> setScriptTimeout sets the time limit for the asynchronous script to finish execution, if the process is not completed before the time limit, selenium throws TimeOutException
-   Question : why do you want to set a timeout for executeAsyncScript?
-   Answer : The default timeout for setScriptTimeout method is 0 (zero) if we do not set any time our executeAsyncScript method may fail because the JavaScript code may take more than zero seconds. So to avoid unnecessary failures, we have to set the setScriptTimeout.
+      -> setScriptTimeout sets the time limit for the asynchronous script to finish execution, if the process is not completed before the time limit, selenium throws TimeOutException
+      Question : why do you want to set a timeout for executeAsyncScript?
+      Answer : The default timeout for setScriptTimeout method is 0 (zero) if we do not set any time our executeAsyncScript method may fail because the JavaScript code may take more than zero seconds. So to avoid unnecessary failures, we have to set the setScriptTimeout.
    
-   Syntax : 
+      Syntax : 
          driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
          ((JavascriptExecutor) driver).executeAsyncScript("document.getElementById('dummy')");
 
