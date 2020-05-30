@@ -3,14 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DriverManager.TestDriverManager">
+      <class name="com.basicSelenium.ChromeBrowser">
         <methods>
-          <include name="setupClass"/>
-          <include name="teardown"/>
-          <include name="setupTest"/>
-          <include name="test"/>
+          <include name="openChromeBrowser"/>
         </methods>
-      </class> <!-- DriverManager.TestDriverManager -->
+      </class> <!-- com.basicSelenium.ChromeBrowser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
