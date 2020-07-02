@@ -102,3 +102,11 @@ Leaning Basic Selenium using Java , WebDriver, TestNG
                 FileUtils.copyFile(scrFile, new File("D:pageScreenshot.png"), true); 
    
         
+        
+        
+        
+        
+        
+        
+        
+    
