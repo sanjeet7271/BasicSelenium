@@ -102,7 +102,10 @@ Leaning Basic Selenium using Java , WebDriver, TestNG
                 FileUtils.copyFile(scrFile, new File("D:pageScreenshot.png"), true); 
    
         
-        
+ ### Kill browser session ID for different browser
+         * Run following t\command to kill current seesion   ie. browser id 
+             for Internet Explorer --    taskkill /f /fi "pid gt 0" /im iexplore.exe
+             for chrome driver ----  taskkill /f /fi "pid gt 0" /im chromedriver.exe
         
         
         
