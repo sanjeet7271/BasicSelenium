@@ -6,7 +6,8 @@
     `WebDriver driver = ThreadGuard.protect(new FirefoxDriver());`
     
 ## Switch tabs using Selenium with Java
-    # Switch tabs between only 2 tabs
+
+    #Switch tabs between only 2 tabs
           String parentTab=driver.getWindowHandle();
           ArrayList<String> tabs=new ArrayList<String>(driver.getWindowHandles());
           if(parentTab.equals(tabs.get(0)){
@@ -14,4 +15,13 @@
           }else{
               driver.SwitchTo().Window(tabs.get(0));
           }
-  
+    #Switch tabs between more than 2 tabs
+        String parentTab=driver.getWindowHandle();
+        ArrayList<String> tabs=new ArrayList<String>(driver.getWindowHandles());
+        for(String tab:tabs){
+            driver.SwitchTo().window(tab);
+            if(driver.getTitle().equals("topics")){
+               breaks;
+            }
+            
+        }
