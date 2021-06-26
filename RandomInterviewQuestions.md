@@ -4,4 +4,14 @@
   3.) Like webdriver listener we have to wrap the webdriver instance using the ThreadGuard class, for that purpose we a method called protect()in ThreadGuard class.<br>
   Example :
     `WebDriver driver = ThreadGuard.protect(new FirefoxDriver());`
+    
+## Switch tabs using Selenium with Java
+    # Switch tabs between only 2 tabs
+          String parentTab=driver.getWindowHandle();
+          ArrayList<String> tabs=new ArrayList<String>(driver.getWindowHandles());
+          if(parentTab.equals(tabs.get(0)){
+            driver.SwitchTo().Window(tabs.get(1));
+          }else{
+              driver.SwitchTo().Window(tabs.get(0));
+          }
   
