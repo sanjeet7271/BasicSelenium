@@ -3,5 +3,5 @@
   2.) Parallel execution is nothing but running the selenium in multiple threads, when one thread interrupts the other thread then JVM throws exceptions.<br>
   3.) Like webdriver listener we have to wrap the webdriver instance using the ThreadGuard class, for that purpose we a method called protect()in ThreadGuard class.<br>
   Example :
-  'WebDriver driver = ThreadGuard.protect(new FirefoxDriver());'
+    `WebDriver driver = ThreadGuard.protect(new FirefoxDriver());`
   
