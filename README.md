@@ -110,13 +110,7 @@ Leaning Basic Selenium using Java , WebDriver, TestNG
         
 ** Q. How to use Local jar in maven dependency from system?**<br>
 **Answer:** <br>
-<dependency>
-    <groupId>group id name</groupId>
-    <artifactId>artifact name</artifactId>
-    <version>version number</version>
-    <scope>system</scope>
-    <systemPath>jar location</systemPath>
-</dependency>
+         ![image](https://user-images.githubusercontent.com/45819133/133749002-03206cd7-2d1f-4341-8aa4-594c6f1e0619.png)
 
 Group id: will identify your project across all projects(com.test.selenium)
 Artifact id: project name
