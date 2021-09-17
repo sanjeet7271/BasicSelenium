@@ -108,8 +108,8 @@ Leaning Basic Selenium using Java , WebDriver, TestNG
              for chrome driver ----  taskkill /f /fi "pid gt 0" /im chromedriver.exe
         
         
-** Q. How to use Local jar in maven dependency from system?**
-**Answer:**
+** Q. How to use Local jar in maven dependency from system?**<br>
+**Answer:** <br>
 <dependency>
     <groupId>group id name</groupId>
     <artifactId>artifact name</artifactId>
@@ -123,7 +123,7 @@ Artifact id: project name
 Project:  Its root node of pom.xml
 Scope: defines scope for this maven project. It can be compiled, provided, runtime, test and system
 Packaging: defines packaging such as jar, war etc.
-**Q. Where all jar file downloads in the local system?**
+**Q. Where all jar file downloads in the local system?** <br>
 Ans: 	.m2 folder
        
         
