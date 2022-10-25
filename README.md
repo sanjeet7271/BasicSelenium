@@ -138,4 +138,86 @@ JSON Wire Protocol over http
 
         
         
-    
+### SOME POINTS ABOUT SEARCHCONTEXT: <br>
+		=> SearchContext is the super interface of the Webdriver.
+		=> Two subinterface Webdriver and webelement
+		=> SearchContext is having only 2 methods like FindElement() and FinsElements()
+
+
+### Selenium Code Snippet: <br>
+ **1. Scroll Down by javascriptExecutor by defining number of Pixels:**<br>
+				 @Test
+				 public void scrollDown()
+				         {
+				          System.setProperty("webdriver.gecko.driver","D://Selenium    Environment//Drivers//geckodriver.exe");
+				            WebDriver driver = new FirefoxDriver();
+				            driver.navigate().to("Website URL");
+				
+				            //to perform Scroll on application using Selenium
+				            JavascriptExecutor js = (JavascriptExecutor) driver;
+				            js.executeScript("window.scrollBy(0,350)", "");
+				         }
+				}
+**2. Scroll Up by javascriptExecutor by defining number of Pixels: **<br>
+
+			    @Test
+			     public void scrollDown()  {
+			      System.setProperty("webdriver.gecko.driver","D://Selenium Environment//Drivers//geckodriver.exe");
+			
+			      WebDriver driver = new FirefoxDriver();
+			      driver.navigate().to("Website URL"); // Specify the website URL
+			
+			       //to perform Scroll on application using Selenium
+			       JavascriptExecutor js = (JavascriptExecutor) driver;
+			       js.executeScript("window.scrollBy(0,-350)", "");
+			   }
+**3. Scroll down to an element in Selenium until it is visible**<br>
+   
+			public class ScrollByVisibleElement {
+				    WebDriver driver;
+				    @Test
+				    public void ByVisibleElement() {
+				        System.setProperty("webdriver.gecko.driver","D://Selenium Environment//Drivers//geckodriver.exe"); 
+				        WebDriver driver = new FirefoxDriver();
+				        JavascriptExecutor js = (JavascriptExecutor) driver;
+				
+				        //Launch the application		
+				        driver.get("https://www.browserstack.com/guide/selenium-scroll-tutorial");
+				
+				        //Locating element by link text and store in variable "Element"        		
+				        WebElement Element = driver.findElement(By.linkText("Try Selenium Testing For Free"));
+				
+				        // Scrolling down the page till the element is found		
+				        js.executeScript("arguments[0].scrollIntoView();", Element);
+				    }
+			}
+**4. Scroll down to the bottom of the webpage**<br>
+   
+			public class HandleScroll {
+					  @Test
+					  public void scrollDown()  {
+					
+					   System.setProperty("webdriver.gecko.driver","D://Selenium Environment//Drivers//geckodriver.exe");
+					
+					   WebDriver driver = new FirefoxDriver();
+					   driver.navigate().to("Website URL"); // Specify the Website URL
+					
+					   //to perform scroll on an application using Selenium
+					
+					   JavascriptExecutor js = (JavascriptExecutor) driver;
+					   js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+					
+					  }
+			}
+
+
+
+
+**How to input text in the text box using Selenium WebDriver without sendKeys?**<br>
+
+			// To initialize js object
+			JavascriptExecutor JS = (JavascriptExecutor)webdriver;
+			// To enter username
+			JS.executeScript("document.getElementById('User').value='SoftwareTestingMaterial.com'");
+			// To enter password
+			JS.executeScript("document.getElementById('Pass').value='tester'");
