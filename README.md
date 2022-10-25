@@ -117,10 +117,25 @@ Artifact id: project name
 Project:  Its root node of pom.xml
 Scope: defines scope for this maven project. It can be compiled, provided, runtime, test and system
 Packaging: defines packaging such as jar, war etc.
-**Q. Where all jar file downloads in the local system?** <br>
+### **Q. Where all jar file downloads in the local system?** <br>
 Ans: 	.m2 folder
        
-        
+**Q. How does WebDriver Internally work?** <br>
+**A.**  There are four basic components of WebDriver Architecture: <br>
+      - Selenium client Libraries <br>
+      - JSON Wire Protocol over http <br>
+      - Browser Drivers <br>
+      - Browsers <br>
+
+![Selenium-WebDriver-Architecture](https://user-images.githubusercontent.com/45819133/197811998-8e32e2f7-99f1-4c45-8bfb-012be78311df.jpg)
+
+JSON Wire Protocol over http
+
+	- JSON Wire Protocol does  all the communication between the browser and the code. 
+	- JSON is an open standard for exchanging data on web and It supports data structures like object and array. so it become easy to write and read data from JSON.
+	- Data is transferred using a RESTful (Representational State Transfer)  API  using  JSON over HTTP.
+	- GET and POST APIs call happens throught JSON wire protocol.
+
         
         
     
