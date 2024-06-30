@@ -221,3 +221,11 @@ JSON Wire Protocol over http
 			JS.executeScript("document.getElementById('User').value='SoftwareTestingMaterial.com'");
 			// To enter password
 			JS.executeScript("document.getElementById('Pass').value='tester'");
+
+## Difference between selenium 3 and selenium 4
+		Architecture: Selenium 3 uses JSON Wire Protocol for communication, while Selenium 4 uses WebDriver W3C protocol for direct communication between client and server.
+		Chrome Driver: In Selenium 3, Chrome Driver extends Remote WebDriver, whereas in Selenium 4, it extends Chrome Driver itself.
+		Communication: Selenium 3 uses JSON Wire Protocol for communication, whereas Selenium 4 uses WebDriver W3C protocol.
+		Hub & Node Jars: Selenium 3 requires starting Hub & Node Jars before running tests, whereas Selenium 4 doesn't.
+		Features: Selenium 4 offers new features like Relative Locators, improved DevTools API support, and Reactive WebDriver.
+![image](https://github.com/sanjeet7271/BasicSelenium/assets/45819133/9b2d71e0-4e6b-4ffe-a3d2-fedcc0e488fd)
