@@ -236,3 +236,14 @@ JSON Wire Protocol over http
   	3. Send text into the alert box: driver.switchTo().alert().sendKeys(""hello world);
    	4. Get text from alert: driver.switchTo().alert().getText();
   
+## iFrames
+	iframes: we can switch frames using 3 ways
+ 		1. using Webelement : 
+   			WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"));
+      			driver.switchTo().frame(iframe);
+	 	2. using name or ID:
+   				driver.switchTo().frame("buttonframe");
+       		3. Using an index
+	 		driver.switchTo().frame(1);
+    Switch back to parent iframe: driver.switchTo().defaultContent();
+       
