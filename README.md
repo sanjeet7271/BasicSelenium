@@ -247,3 +247,14 @@ JSON Wire Protocol over http
 	 		driver.switchTo().frame(1);
     Switch back to parent iframe: driver.switchTo().defaultContent();
        
+## Selenium code for broken Link
+## Switch to tab in selenium
+## Switch to the window in selenium
+## Exceptions in selenium
+## Exception database connection in selenium
+## Database connect to selenium
+## Certification handling in selenium
+## Desired Capabilities in Selenium
+## Firefox Profile in selenium
+## Handling Shadow Root element
+## Ways of writing xpaths and css-selectors
