@@ -275,6 +275,26 @@ JSON Wire Protocol over http
 ## Exceptions in selenium
 ## Exception database connection in selenium
 ## Database connect to selenium
+	Step 1: Import the packages 
+	Step 2: Load the drivers using class.forname()
+	Step 3: Register the driver using DriverManager
+	Step 4: Establish the connection using the connection
+	Step 5: Create a statement
+	Step 6: Execute the query
+	Step 7: close the connection and statement
+	public class DBConnections {
+		public static void main(String[] args){
+			class.forname("com.mysql.cj.jdbc.driver");
+			Connection con=DriverManager.getConnection(url, username, password);
+			Statement stmt=con.createStatement();
+			ResultSet rs=stmt.executeQuery("Select * from customer");
+			while(rs.next()){
+				system.out.println(rs.getString("name")+" "+rs.getString("Id"));
+			}
+			con.close();
+			stmt.close();
+		}
+	}
 ## Certification handling in selenium
 ## Desired Capabilities in Selenium
 ## Firefox Profile in selenium
