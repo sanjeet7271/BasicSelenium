@@ -248,6 +248,28 @@ JSON Wire Protocol over http
     Switch back to parent iframe: driver.switchTo().defaultContent();
        
 ## Selenium code for broken Link
+	public class LinkVerification{
+		public static void main(){
+			syste.setProperties("webdrvier.chrome.driver","path of chrome driver");
+			Webdriver driver=new ChromeDriver();
+			List<WebElement> elements=driver.findElements(By.tagname("a"));
+			for(Weblement element:elements){
+				String url=element.getAttribute("href");
+				verifyBrokenLinks(url);
+			}
+			driver.quite();
+		}
+		
+		public static void verifyBrokenLinks(String url){
+			URL link=new URL(url);
+			httpURLConnection http=(httpURLConnection)link.opneConnection();
+			http.setConnectiontimeout();
+			http.connect();
+			if(http.getStatusCode==200){
+				system.out.printlm(url+" is not braken");
+			}
+		}
+	}
 ## Switch to tab in selenium
 ## Switch to the window in selenium
 ## Exceptions in selenium
