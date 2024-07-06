@@ -275,7 +275,26 @@ JSON Wire Protocol over http
 ## Reading excel sheet in selenium
 ## Writing excel sheet in selenium 
 ## Exceptions in selenium
+	NoSuchElementException
+ 	ElementNotVisibleException
+  	ElementNotInteractableException
+   	StaleElementReferenceException
+    	TimeoutException
+     	WebDriverException
+      	NoSuchFrameException
+       	NoSuchWindowException
+	NoAlertPresentException
+ 	ConnectionClosedException
+  	ElementNotSelectableException
+   	ErrorHandler.UnknownServerException
+    	ErrorInResponseException
+     	..... and  43 more
 ## Exception database connection in selenium
+	SQLNonTransientException
+ 	SQLTransientException
+  	SQLRecoverableException
+   	BatchUpdateException
+    	SQLClientInfoException
 ## Database connect to selenium
 	Step 1: Import the packages 
 	Step 2: Load the drivers using class.forname()
