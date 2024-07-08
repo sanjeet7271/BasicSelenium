@@ -273,6 +273,36 @@ JSON Wire Protocol over http
 ## Switch to tab in selenium
 ## Switch to the window in selenium
 ## Reading excel sheet in selenium
+	Step 1: Creat workbook instance rom excel sheet
+	Step 2: get to the desired sheet
+	Step 3: Increament the row number
+	Step 4: Iterate overall cell in a row
+	Step 5: Repeat step 3 and step 4 until all data is read
+	Step 6: close the output
+	
+	Class ReadExcelSheet {
+		public static void main(String[] args){
+			FileInputStream fis=new FileInputStream(new File("Location of eccel sheet"))
+			XSSFWorkBook  workbook = new XSSFWorkBook(fis);
+			XSSFSheet sheet=workbook.getSheetAt(0);
+			Set<Row> rowIterator=sheet.iterator();
+			while(rowIterator.next()){
+				Row row=rowIterator.next();
+				Set<Cell> cellIterator=rowIterator.iterator();
+				while(cellIterator.next()){
+					Cell cell=cellIterator.next();
+					switch(cell.getCellType){
+						Case CELL.CELL_TYPE_NUMERIC:
+							system.out.println(cell.getCellNumericValue());
+							Break;
+						Case CELL.CELL_TYPE_STRING:
+							system.out.println(cell.getCellStringValue());
+							Break;
+					}
+				}
+			}
+		}
+	}
 ## Writing excel sheet in selenium
 	Step 1: Create a workbook
 	Step 2: Create a sheet into that workbook
