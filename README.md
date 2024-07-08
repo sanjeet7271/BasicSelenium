@@ -273,7 +273,46 @@ JSON Wire Protocol over http
 ## Switch to tab in selenium
 ## Switch to the window in selenium
 ## Reading excel sheet in selenium
-## Writing excel sheet in selenium 
+## Writing excel sheet in selenium
+	Step 1: Create a workbook
+	Step 2: Create a sheet into that workbook
+	Step 3: Create a row into sheet
+	Step 4: Add cell into sheet
+	Step 5: Repeat  step 3 and step 4 to write more data
+	Step 6: Close the output
+	
+	public class writeIntoExcelSheet{
+		public static void main(String[] args){
+			Map<String, Object[]> data=new TreeMap<>();
+			data.put("1",new Object[]{"Name","Employer","Address"});
+			data.put("2",new Object[]{"Sanjeet","Epam","Chipiyana"});
+			
+			XSSFWorkBook workbook =new XSSFWorkBook();
+			XSSFSheet sheet =workbook.createSheet("Student details");
+			Set<String> keySet=data.keySet();
+			int rowNum=0;
+			for(String key:keySet){
+				Row row=sheet.createRow(rowNum++);
+				Object[] objArr=data.get(key);
+				int colNum=0;
+				for(Object obj:ObjArr){
+					Cell cell=row.createCell(cellNum++);
+					if(obj instanceOf String){
+						cell.setCellValue((String)obj);
+					}
+					if(obj instanceOf integer){
+						cell.setCellValue((Integer)obj);
+					}
+				}
+			}
+			try{
+				FileOutputStream fout=new FileOutputStream(new File("File location"))
+				workbook.write(fout);
+				fout.close();
+			}
+		}
+	}
+
 ## Exceptions in selenium
 	NoSuchElementException
  	ElementNotVisibleException
