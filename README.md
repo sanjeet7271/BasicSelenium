@@ -385,6 +385,63 @@ JSON Wire Protocol over http
 			stmt.close();
 		}
 	}
+
+## Challenges in Parallel Excutions
+		Challenges in Parallel Execution
+			-> NullpointerException
+			-> NoSuchSessionException
+			-> Threads interference
+			-> unEven results
+		
+		Different ways of driver initializations
+			-> Static Driver
+			-> Singleton Driver
+		
+		public class LoginTestStatic {
+			 private static WebDriver driver;
+			 
+			 @BeforeMethod
+			 public void setup(){
+				WebDriverManager.chromedriver().setup();
+				driver=new ChromeDriver();
+				driver.get("https://www.google.com")
+			 }
+			 
+			 @Test
+			 public void loginTest(){
+				system.out.println("Test1")
+			 }
+			 
+			 @Test
+			 public void loginTest2(){
+				system.out.println("Test2")
+			 }
+		}
+		
+		Problem: Sequential execution will be fine in this case, but parallel execution failed due to thread interference
+		Solution : we can Use ThreadLocal to achieve Thread Interference or thread safety
+		
+		public class LoginTestStatic {
+			 private static THreadLocal<WebDriver> threadLocalDriver =new ThreadLocal<>();
+			 
+			 @BeforeMethod
+			 public void setup(){
+				WebDriverManager.chromedriver().setup();
+				threadLocalDriver.set(new ChromeDriver());
+				driver=threadLocalDriver.get();
+				driver.get("https://www.google.com")
+			 }
+			 
+			 @Test
+			 public void loginTest(){
+				system.out.println("Test1")
+			 }
+			 
+			 @Test
+			 public void loginTest2(){
+				system.out.println("Test2")
+			 }
+		}
 ## Certification handling in selenium
 ## Desired Capabilities in Selenium
 ## Firefox Profile in selenium
