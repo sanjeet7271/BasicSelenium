@@ -1,3 +1,9 @@
+## Types of Framework in Selenium
+  Selenium frameworks can be classified into three main types based on the functional approach:
+    1. Data-driven framework
+    2. Keyword-driven framework
+    3. Hybrid framework -  Combines elements of both the keyword-driven and data-driven frameworks.
+
 ## Thread Guard Class in Selenium
   1.) When we run our test cases in parallel using TestNg in selenium, you might have faced issues like some environmental, or some unknown issues halting the parallel execution.<br>
   2.) Parallel execution is nothing but running the selenium in multiple threads, when one thread interrupts the other thread then JVM throws exceptions.<br>
