@@ -444,79 +444,79 @@ JSON Wire Protocol over http
 		}
 ## Handle Cockies
 			Cookies are usually used to recognize the identity of a user on a website. In simple terms, a cookie is a portion of data that has been sent from a web application and stored in a browser. Whenever a user browses a website, the information about the user and their favorites is stored as a cookie in the form of key-value pairs.
-   => There are Three Operations performed in the Cookies
-   1.)  Get Cookies in Selenium WebDriver
-   	public class HandleCookies {
-	    	public static void main(String args[]) {
-		 	System.setProperty("webdriver.chrome.driver", "ChromeDriver Path");
-		        WebDriver driver = new ChromeDriver();
-		        String url ="https://www.lambdatest.com/";
-		        driver.get(url);
-		        driver.manage().window().maximize();
-		        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		        Set<Cookie> cookiesList =  driver.manage().getCookies();
-		        for(Cookie getcookies :cookiesList) {
-		            System.out.println(getcookies);
-		        }
-	  		// To get information about a specific cookie, use the below command:
-     			Cookie cookieValue = driver.manage().getCookieNamed("JSESSIONID");
-        		System.out.println(cookieValue.getValue());
-		        driver.close();
-	    }
-	}
- 2.) Add a new Cookie in Selenium WebDriver
-		 public class HandleCookies {
-		    public static void main(String args[]) {
-		        System.setProperty("webdriver.chrome.driver", "ChromeDriver Path");
-		        WebDriver driver = new ChromeDriver();
-		        String url ="https://www.lambdatest.com/";
-		        driver.get(url);
-		        driver.manage().window().maximize();
-		        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		        
-		        //For creating a new cookie we should pass the name of the cookie and its value
-		        Cookie cname = new Cookie("myCookie", "12345678999");
-		        driver.manage().addCookie(cname);
-		 
-			//retrieve the cookies to view the newly added cookie
-		        Set<Cookie> cookiesList =  driver.manage().getCookies();
-		        for(Cookie getcookies :cookiesList) {
-		            System.out.println(getcookies );
-		        }
-		        driver.close();
-		    }
-		}
-  3.) Delete a Cookie in Selenium WebDriver
-	  	public class HandleCookies {
-		    public static void main(String args[]) {
-		        System.setProperty("webdriver.chrome.driver", "ChromeDriver Path");
-		        WebDriver driver = new ChromeDriver();
-		        String url ="https://www.lambdatest.com/";
-		        driver.get(url);
-		        driver.manage().window().maximize();
-		        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		        
-		        //For creating a new cookie we should pass the name of the cookie and its value
-		        Cookie cname = new Cookie("myCookie", "12345678999");
-		        driver.manage().addCookie(cname);
-		 
-		        Set<Cookie> cookiesList =  driver.manage().getCookies();
-		        for(Cookie getcookies :cookiesList) {
-		            System.out.println(getcookies );
-		        }
-		        
-		        //delete the newly created cookie
-		        driver.manage().deleteCookie(cname);
-		        Set<Cookie> cookiesListNew =  driver.manage().getCookies();
-		        for(Cookie getcookies :cookiesListNew) {
-		            System.out.println(getcookies );
-		        }
-		        driver.close();
-		    }
-		}
-  => driver.manage().deleteCookie(arg0); // Deletes the specific cookie
-  => driver.manage().deleteCookieNamed(arg0); // Deletes the specific cookie by its name
-  => driver.manage().deleteAllCookies(); // Deletes all the cookies
+   	=> There are Three Operations performed in the Cookies <br>
+	   1.)  Get Cookies in Selenium WebDriver <br>
+		   	public class HandleCookies {
+			    	public static void main(String args[]) {
+				 	System.setProperty("webdriver.chrome.driver", "ChromeDriver Path");
+				        WebDriver driver = new ChromeDriver();
+				        String url ="https://www.lambdatest.com/";
+				        driver.get(url);
+				        driver.manage().window().maximize();
+				        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+				        Set<Cookie> cookiesList =  driver.manage().getCookies();
+				        for(Cookie getcookies :cookiesList) {
+				            System.out.println(getcookies);
+				        }
+			  		// To get information about a specific cookie, use the below command:
+		     			Cookie cookieValue = driver.manage().getCookieNamed("JSESSIONID");
+		        		System.out.println(cookieValue.getValue());
+				        driver.close();
+			    }
+			}
+	 2.) Add a new Cookie in Selenium WebDriver <br>
+			 public class HandleCookies {
+			    public static void main(String args[]) {
+			        System.setProperty("webdriver.chrome.driver", "ChromeDriver Path");
+			        WebDriver driver = new ChromeDriver();
+			        String url ="https://www.lambdatest.com/";
+			        driver.get(url);
+			        driver.manage().window().maximize();
+			        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+			        
+			        //For creating a new cookie we should pass the name of the cookie and its value
+			        Cookie cname = new Cookie("myCookie", "12345678999");
+			        driver.manage().addCookie(cname);
+			 
+				//retrieve the cookies to view the newly added cookie
+			        Set<Cookie> cookiesList =  driver.manage().getCookies();
+			        for(Cookie getcookies :cookiesList) {
+			            System.out.println(getcookies );
+			        }
+			        driver.close();
+			    }
+			}
+	  3.) Delete a Cookie in Selenium WebDriver <br>
+		  	public class HandleCookies {
+			    public static void main(String args[]) {
+			        System.setProperty("webdriver.chrome.driver", "ChromeDriver Path");
+			        WebDriver driver = new ChromeDriver();
+			        String url ="https://www.lambdatest.com/";
+			        driver.get(url);
+			        driver.manage().window().maximize();
+			        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+			        
+			        //For creating a new cookie we should pass the name of the cookie and its value
+			        Cookie cname = new Cookie("myCookie", "12345678999");
+			        driver.manage().addCookie(cname);
+			 
+			        Set<Cookie> cookiesList =  driver.manage().getCookies();
+			        for(Cookie getcookies :cookiesList) {
+			            System.out.println(getcookies );
+			        }
+			        
+			        //delete the newly created cookie
+			        driver.manage().deleteCookie(cname);
+			        Set<Cookie> cookiesListNew =  driver.manage().getCookies();
+			        for(Cookie getcookies :cookiesListNew) {
+			            System.out.println(getcookies );
+			        }
+			        driver.close();
+			    }
+			}
+	  => driver.manage().deleteCookie(arg0); // Deletes the specific cookie <br>
+	  => driver.manage().deleteCookieNamed(arg0); // Deletes the specific cookie by its name <br>
+	  => driver.manage().deleteAllCookies(); // Deletes all the cookies <br>
 ## Certification handling in selenium
 ## Desired Capabilities in Selenium
 ## Firefox Profile in selenium
