@@ -1,8 +1,13 @@
-# Basic Selenium and Its terms 
-Leaning Basic Selenium using Java , WebDriver, TestNG
+# Types of frameworks used in Selenium
+	- Modular Framework: Follows an ordered folder structure
+	- Data-Driven Framework: The Script uses data from data files like Excel and validates input/output
+	- Keyword Driven: The Script uses wrapper methods + Excel read/write
+	- Hybrid Framework: Combination of all frameworks
+# Basic Selenium and Its Terms 
+Learning Basic Selenium using Java, WebDriver, and TestNG
 
 # Starting Selenium
-   ### Interfaces in selenium:
+   ### Interfaces in Selenium:
                 i)  SearchContext Interface
                 ii) WebDriver
             => SearchContext is the parent interface of WebDriver    
