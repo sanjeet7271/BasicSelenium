@@ -280,11 +280,12 @@ JSON Wire Protocol over http
 		
 		public static void verifyBrokenLinks(String url){
 			URL link=new URL(url);
-			httpURLConnection http=(httpURLConnection)link.opneConnection();
-			http.setConnectiontimeout();
-			http.connect();
-			if(http.getStatusCode==200){
-				system.out.printlm(url+" is not braken");
+			httpURLConnection connection=(httpURLConnection)link.opneConnection();
+			connection.setRequestMethod("GET");
+			connection.setConnectiontimeout();
+			connection.connect();
+			if(connection.getStatusCode==400){
+				system.out.printlm(url+" is broken");
 			}
 		}
 	}
