@@ -3,6 +3,10 @@
 	- Data-Driven Framework: The Script uses data from data files like Excel and validates input/output
 	- Keyword Driven: The Script uses wrapper methods + Excel read/write
 	- Hybrid Framework: Combination of all frameworks
+# Component of Frameworks
+	- Input :
+	- Resource
+	- output
 # Basic Selenium and Its Terms 
 Learning Basic Selenium using Java, WebDriver, and TestNG
 
