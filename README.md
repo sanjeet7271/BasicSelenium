@@ -291,6 +291,22 @@ JSON Wire Protocol over http
 	}
 ## Switch to tab in selenium
 ## Switch to the window in selenium
+		public class handleMultipleWindows{
+			public static void main(String[] args){
+				driver.findElement(By.xpath("xpath"));
+				String parentWindow=driver.getWindowHandle();
+				// below xpath of button of new window if click on thsi but new window will be opened
+				WebElement element=driver.findElement(By.xpath("xpath of new window"));
+				element.click();
+				Set<String> windows= driver.getWindowHandles();
+				Iterator<String> itr=windows.iterator();
+				while(itr.hasNext()){
+					String newWindow=itr.next();
+					driver.switchTo().window(newWindow);
+				}
+				driver.switchTo().window(parentWindow);
+			}
+		}
 ## Reading excel sheet in selenium
 	Step 1: Creat workbook instance rom excel sheet
 	Step 2: get to the desired sheet
