@@ -290,6 +290,7 @@ JSON Wire Protocol over http
 		}
 	}
 ## Switch to tab in selenium
+			 driver.switchTo().newWindow(WindowType.TAB);
 ## Switch to the window in selenium
 		public class handleMultipleWindows{
 			public static void main(String[] args){
