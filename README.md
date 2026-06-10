@@ -255,7 +255,16 @@ JSON Wire Protocol over http
        		3. Using an index
 	 		driver.switchTo().frame(1);
     Switch back to parent iframe: driver.switchTo().defaultContent();
-       
+
+# Select Class: Drop-down selection
+		Select sel=new Select(driver.findElement("xpath"));
+		1.) Select By Value
+		sel.selectByValue(2);
+		2.) Select By Index
+		sel.selectByIndex("2");
+		3.) Select by Visible text
+		sel.selectByVisibleText("text")
+
 ## Selenium code for broken Link
 	public class LinkVerification{
 		public static void main(){
