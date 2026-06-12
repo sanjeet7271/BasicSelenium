@@ -42,3 +42,18 @@
                             Ancestor ← Parent ← Self → Child → Descendant
                             
                             Preceding ← Self → Following
+
+# HTML
+                    <div class="container">
+                        <form>
+                            <label>Email</label>
+                            <input type="text" id="email">
+                    
+                            <label>Password</label>
+                            <input type="password" id="pwd">
+                    
+                            <button>Login</button>
+                        </form>
+                    </div>
+# 1. Parent Relation: With above html dom find parent
+              //input[@id='email']/parent::form
