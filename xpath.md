@@ -55,5 +55,8 @@
                             <button>Login</button>
                         </form>
                     </div>
-# 1. Parent Relation: With above html dom find parent
+## 1. Parent Relation: With the above HTML DOM, find the parent
               //input[@id='email']/parent::form
+## 2. Child Relation: With the above HTML DOM, find the child
+            //form/child::input[@id='pwd']
+## 3. Ancestor Relation
