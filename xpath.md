@@ -15,3 +15,30 @@
     //input[starts-with(@id,'user')]
     5. Using Multiple Conditions
     //input[@type='text' and @name='username']
+
+# XPaths Relations
+  - Parent Relation
+  - Child Relation
+  - Ancestor Relation
+  - Descendant Relation
+  - Following-Sibling Relation
+  - Preceding-Sibling Relation
+  - Following Relation
+  - Preceding Relation
+  - Self Relation
+  - Attribute Relation
+
+# DOM Relationship Summary
+                            Grandparent (Ancestor)
+                                    |
+                                 Parent
+                                    |
+                                 Current (Self)
+                                  /    \
+                             Child   Following-Sibling
+                                        |
+                                 Preceding-Sibling
+                            
+                            Ancestor ← Parent ← Self → Child → Descendant
+                            
+                            Preceding ← Self → Following
