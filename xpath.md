@@ -63,3 +63,13 @@
             //input[@id='email']/ancestor::div
 ## 4. Descendant Relation: Find any child, grandchild, etc.
           //div[@class='container']/descendant::input[@id='pwd']
+## 5. Following-Sibling Relation: Find siblings after the current element.
+          //input[@id='email']/following-sibling::label[text()='password']
+## 6. Preceding-Sibling Relation: Find siblings before the current element.
+          //input[@id='email']/preceeding-sibling:label
+## 7. Following Relation: Find any element appearing after the current element in the document.
+          //label[text()='Email']/following::button
+## 8. Preceding Relation: Find any element before the current element.
+          //button[text()='Login']/preceding::input
+## 9. Self Relation: Refers to the current element itself.
+          //input[@id='email']/self::input
